@@ -4,18 +4,13 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public class Reptiles : Animal
+    public abstract class Reptile : Animal
     {
-        public int CSpeed { get; set; }
-        public Reptiles(string name, int cSpeed) : base(name)
+        public Reptile()
         {
-            CSpeed = cSpeed;
+            Console.WriteLine("I'm a reptile.");
         }
+        public abstract int GetSpeed();
 
-        public void Crawl()
-
-        {
-            Console.WriteLine($"I'm a Reptile named {Name} and i can Crawl with {CSpeed}km/h");
-        }
     }
 }

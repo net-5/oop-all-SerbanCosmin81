@@ -6,25 +6,41 @@ namespace ModelAnimals
     {
         static void Main(string[] args)
         {
-            Insects myIns = new Insects("TigerFly",5,45);
-            myIns.Walk();
-            myIns.ClassFly();
-
-            Mammal myMamm = new Mammal("Platypus",10);
-            myMamm.Walk();
-            Mammal myMamm2 = new Mammal("Bat", 35);
-            myMamm2.Walk();
+            //mammal
+            Platypus orni = new Platypus();
+            orni.Swim();
+            orni.Walk();
+            orni.Name = "Platypus the new one";
+            Console.WriteLine("My name is {0} and I can have a speed of {1} km/hour.\n", orni.Name, orni.GetSpeed());
+            //fish
+            FlyingFish fish = new FlyingFish();
+            fish.Fly();
+            fish.Swim();
             
+            fish.Name = "FlyingFish the new one";
+            Console.WriteLine("My name is {0} and I can have a speed of {1} km/hour.\n", fish.Name, fish.GetSpeed());
+            //bird
+            WildDuck duck = new WildDuck();
+            duck.Swim();
+            duck.Fly();
+            duck.Walk();
+            duck.Name = "WildDuck the new one";
+            Console.WriteLine("My name is {0} and I can have a speed of {1} km/hour.\n", duck.Name, duck.GetSpeed());
+            //reptile
+            FlyingLizard lizard = new FlyingLizard();
+            lizard.Fly();
+            lizard.Crawl();
+            lizard.Swim();
+            lizard.Name = "FlyingLizard the new one";
+            Console.WriteLine("My name is {0} and I can have a speed of {1} km/hour.\n", lizard.Name, lizard.GetSpeed());
+            //insect
+            Mosquito insect = new Mosquito();
+            insect.Walk();
+            insect.Fly();
+            insect.Name = "BzzMosquitozzz";
+            Console.WriteLine("My name is {0} and I can have a speed of {1} km/hour.\n", insect.Name, insect.GetSpeed());
 
-            Birds myBird1 = new Birds("Ostrich",8,60);
-            myBird1.AWEFlyWalkSwim();
 
-            AirWaterEarth myBird2 = new Birds("WildDuck",15,35);
-            myBird2.AWEFlyWalkSwim();
-
-            Reptiles myRep = new Reptiles("Snake",10);
-            myRep.Crawl();
-                
         }
     }
 }

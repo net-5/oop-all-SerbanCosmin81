@@ -4,18 +4,13 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public class Fish : Mammal
+    public abstract class Fish : Animal
     {
-        private static readonly int sWSpeed;
-
-        public Fish(string name) : base(name, sWSpeed)
+        public Fish()
         {
-            this.wSpeed = sWSpeed;
+            Console.WriteLine("I'm a fish.");
         }
-
-        public void Swim()
-        {
-            Console.WriteLine($"I'm a fish named {Name} and my Native Meth is swimming with this speed {sWSpeed}km/h"); 
-        }
+        public abstract int GetSpeed();
     }
+
 }

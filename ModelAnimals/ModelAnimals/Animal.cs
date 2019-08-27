@@ -10,15 +10,17 @@ namespace ModelAnimals
 
         public string Name
         {
-            get { return name; }
-            set { name = value; }
-        }
-        public Animal(string name)
-        {
-            this.name = name;
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                this.name = value;
+            }
         }
 
-        
+
 
     }
 }

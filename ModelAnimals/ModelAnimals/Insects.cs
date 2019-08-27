@@ -4,24 +4,12 @@ using System.Text;
 
 namespace ModelAnimals
 {
-    public class Insects : Mammal
+    public abstract class Insect : Animal
     {
-        private readonly int fSpeed;
-
-        public Insects(string name, int wSpeed, int fSpeed) : base(name,wSpeed)
+        public Insect()
         {
-            this.wSpeed = wSpeed;
-            this.fSpeed = fSpeed;
+            Console.WriteLine("I'm an insect.");
         }
-
-        public void ClassFly()
-        {
-            Console.WriteLine($"i am an insect named {Name} and i can fly with {fSpeed}km/h");
-        }
-
-        public override void Walk()
-        {
-            Console.WriteLine($"I'm an insect named {Name} and i can walk with {wSpeed}Km/h"); ;
-        }
+        public abstract int GetSpeed();
     }
 }
